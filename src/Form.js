@@ -30,7 +30,7 @@ const submitForm = (e) => {
                         <option value="Clown">Clown</option>
                         <option value="Trapeze Artiste">Trapeze Artiste</option>
                         <option value="Lion Tamer">Lion Tamer</option>
-                        <option value="fFire Eaterire">Fire Eater</option>
+                        <option value="Fire Eater">Fire Eater</option>
                         <option value="Juggler Extraordinaire">Juggler Extraordinaire</option>
                         <option value="Magician">Magician</option>
                         <option value="Fortune Teller">Fortune Teller</option>
@@ -44,7 +44,7 @@ const submitForm = (e) => {
                     name="insurance"
                     type="checkbox"
                     onChange={change}
-                    value={values.insurance}
+                    value='Yes'
                     />
                 </label>
             </div>
@@ -55,6 +55,4 @@ const submitForm = (e) => {
             </div>
         </form>
     )
-
-
 }

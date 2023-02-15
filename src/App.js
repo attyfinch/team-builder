@@ -4,9 +4,9 @@ import Circus from './Form';
 import React, { useState } from 'react';
 
 const circusMembers = [
-  { name: 'Marla Magnifico', act: 'Fire Eater', insurance: 'No' },
+  { name: 'Marla Magnifico', act: 'Fire Eater', insurance: '' },
   { name: 'Mr. George', act: 'Lion Tamer', insurance: 'Yes' },
-  { name: 'Boinky Booboo', act: 'Clown', insurance: 'No' }
+  { name: 'Boinky Booboo', act: 'Clown', insurance: '' }
 ]
 
 function App() {
@@ -19,9 +19,12 @@ function App() {
     setFormValues({...formValues, [name]: value})
   };
 
+  
+
   const submit = () => {
     setMembers(members.concat({name: formValues.name, act: formValues.act, insurance: formValues.insurance}));
     setFormValues({name: "", act: "", insurance: ""});
+    console.log(members)
   }
 
   return (
@@ -35,7 +38,7 @@ function App() {
         { members.map((mem, idx) => {
           return (
             <div key={idx}>
-              {mem.name} the {mem.act}
+              {mem.name} the {mem.act} {mem.insurance ? 'w/ health insurance' : 'with no health insurance'}
             </div>
           )
         })}
